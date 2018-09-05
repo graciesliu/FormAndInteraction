@@ -31,7 +31,25 @@ div{
 	height:0px;
 	border-right:2.5rem solid transparent;
 	border-left: 2.5rem solid transparent;
-	border-bottom: 5rem solid blue;
+	border-bottom: 5rem solid brown;
+	position: absolute;
+	background-blend-mode: screen;
+}
+.medDwnTri{
+	width:0px;
+	height:0px;
+	border-right:1.5rem solid transparent;
+	border-left: 1.5rem solid transparent;
+	border-top: 3rem solid turquoise;
+	position: absolute;
+	background-blend-mode: screen;
+}
+.lrgDwnTri{
+	width:0px;
+	height:0px;
+	border-right:2.5rem solid transparent;
+	border-left: 2.5rem solid transparent;
+	border-top: 5rem solid blue;
 	position: absolute;
 	background-blend-mode: screen;
 }
@@ -93,11 +111,11 @@ div{
 #B #bs2{
 	top:2rem;
 }
-#B #bc1
+#B #bc1{
 	left: 1.5rem;
 }
 #B #bc2{
-	/*top:2rem;*/
+	top:2rem;
 	left: 1.5rem;
 }
 #C .smlCir{
@@ -151,7 +169,7 @@ div{
 	top: 2rem;
 	left: 4rem;
 }
-#I #is2
+#I #is2{
 	top: 2rem;
 }
 #J #js1{
@@ -232,54 +250,112 @@ div{
 #S #sc2{
 	top: 2rem;
 }
-#
-#T{
-
+#S #sc3{
+	top:1rem;
+	left: 2rem;
 }
-#U{
-
+#S #sc4{
+	top:3rem;
+}
+#T #ts1{
+	left: 1rem;
+}
+#T #ts2{
+	left: 1rem;
+	top: 2rem;
+}
+#T #tc2{
+	left: 4rem;
+}
+#U #us2{
+	left: 2rem;
 }
 #V{
 
 }
-#W{
-
+#W #ws2{
+	left: 3rem;
+}
+#W #wt1{
+	top: 2rem;
+}
+#W #wt2{
+	top: 2rem;
+	left: 3rem;
 }
 #X{
 
 }
-#Y{
-
+#Y #ys1{
+	left: 1rem;
 }
-#Z{
-
+#Y #ys2{
+	left: 1rem;
+	top: 2rem;
 }
-#n1{
-
+#Z .medDwnTri{
+	left: 1rem;
 }
-#n2{
-
+#Z .medTri{
+	left: 1rem;
+	top: 2rem;
 }
-#n3{
-
+#Z #zc2{
+	top: 4rem;
+	left: 4rem;
 }
-#n4{
-
+#n1 #OneS1{
+	left: 1rem;
 }
-#n5{
-
+#n1 #OneS2{
+	top: 2rem;
+	left: 1rem;
 }
-#n6{
-
+#n2 .medTri{
+	top: 2rem;
 }
-#n7{
-
+#n3 #ThreeC2{
+	top: 2rem;
 }
-#n8{
-
+#n3 #ThreeC3{
+	top: 1rem;
 }
-#n9{
-
+#n3 #ThreeC4{
+	top: 3rem;
+}
+#n4 #FourS1{
+	left: 1.5rem;
+}
+#n4 #FourS2{
+	left: 1.5rem;
+	top: 2rem;
+}
+#n5 .medCir{
+	top: 2rem;
+}
+#n6 #SixC2{
+	top: 2rem;
+}
+#n6 .smlCir{
+	left: 2rem;
+	top: 1rem;
+}
+#n7 #SevS1{
+	left: 2.5rem;
+}
+#n7 #SevS2{
+	left: 2.5rem;
+	top: 2rem;
+}
+#n8 #EightC2{
+	top: 2rem;
+}
+#n9 #NineS1{
+	left: 1.5rem;
+}
+#n9 #NineS2{
+	left: 1.5rem;
+	top: 2rem;
 }
 #n0{
 
