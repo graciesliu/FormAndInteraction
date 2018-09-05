@@ -1,0 +1,311 @@
+html{
+	font-size: 24px;
+}
+body{
+	width:100%;
+	height:100%;
+	margin: auto;
+}
+.char{
+	margin: 10rem;
+}
+
+div{
+	background-blend-mode: screen;
+	width: 8rem;
+	height:6rem;
+}
+
+.medTri{
+	width:0px;
+	height:0px;
+	border-right:1.5rem solid transparent;
+	border-left: 1.5rem solid transparent;
+	border-bottom: 3rem solid red;
+	position: absolute;
+	background-blend-mode: screen;
+}
+.lrgTri{
+	width:0px;
+	height:0px;
+	border-right:2.5rem solid transparent;
+	border-left: 2.5rem solid transparent;
+	border-bottom: 5rem solid blue;
+	position: absolute;
+	background-blend-mode: screen;
+}
+
+.smlCir{        
+	width: 1rem;
+	height: 1rem;
+	border-radius: 1rem;
+	background-color: gray;
+	position: absolute;
+	background-blend-mode: screen;
+}
+.medCir{
+	width: 3rem;
+	height: 3rem;
+	border-radius: 3rem;
+	background-color: black;
+	position: absolute;
+	background-blend-mode: screen;
+}
+.lrgCir{
+	width: 5rem;
+	height: 5rem;
+	border-radius: 5rem;
+	background-color: magenta;
+	position: absolute;
+	background-blend-mode: screen;
+}
+
+.smlSqr{
+	width: 1rem;
+	height:1rem;
+	background-color: orange;
+	position: absolute;
+	background-blend-mode: screen;
+}
+.medSqr{
+	width: 3rem;
+	height: 3rem;
+	background-color:yellow;
+	position: absolute;
+	background-blend-mode: screen;
+}
+
+
+/*.red{
+	background-color: red; 
+}
+
+.green{
+	background-color: green;
+}
+*/
+#A .smlCir{
+	position: relative;
+	left: 2rem;
+	top:3rem;
+}
+#B #bs2{
+	position: relative;
+	top:2rem;
+}
+#B #bc1{
+position: relative;
+	left: 1.5rem;
+}
+#B #bc2{
+	position: relative;
+	/*top:2rem;*/
+	left: 1.5rem;
+}
+#C .smlCir{
+	position: relative;
+	top:2rem;
+	left:4rem;
+}
+#D #ds2{
+	position: relative;
+	top:2rem;
+}
+#E #es2{
+	position: relative;
+	/*top:2rem;*/
+}
+#E #ec1{
+	position: relative;
+	left:3rem;
+}
+#E #ec2{
+	position: relative;
+	left:3rem;
+	top:4rem;
+}
+#E .smlSqr{
+		position: relative;
+	left:3rem;
+	top:2rem;
+}
+#F #fs2{
+	position: relative;
+	top: 2rem;
+}
+#F .smlCir{
+	position: relative;
+	left: 3rem;
+}
+#F .smlSqr{
+	position: relative;
+	top: 2rem;
+	left: 3rem;
+}
+#G .medSqr{
+	position:relative;
+	top: 2rem;
+	left: 2rem;
+}
+#H .smlCir{
+	position: relative;
+	top: 2rem;
+	left: 3rem;   
+}
+#H #hs2{
+	position: relative;
+	top: 2rem;
+}
+#H #hs3{
+	position: relative;
+	left: 4rem;
+}
+#H #hs4{
+	position: relative;
+	top: 2rem;
+	left: 4rem;
+}
+#I #is2{
+position: relative;
+	top: 2rem;
+}
+#J #js1{
+	position: relative;
+	left: 1.5rem;
+}
+#J #js2{
+	position: relative;
+	left: 1.5rem;
+	top: 2rem;
+}
+#J .medCir{
+	position: relative;
+	top: 3rem;
+}
+#K #ks2{     
+	position: relative;
+	top: 2rem;
+}
+#K .medTri{
+	position: relative;
+	left: 1.5rem;
+	top: 2rem;
+}
+#K .smlCir{
+	position: relative;
+	left: 3.5rem;
+}
+#L #ls2{
+	position: relative;
+	top: 2rem;
+}
+#L .smlSqr{
+	position: relative;
+	top: 4rem;
+	left: 3rem;
+}
+#M #ms1{
+	position: relative;
+	top: 2rem;
+}   
+#M #ms2{
+	position: relative;
+	top: 2rem;
+	left: 3rem;
+}
+#M #mt2{
+	position: relative;
+	left: 3rem;
+}
+#N #ns2{
+	position: relative;
+	top: 2rem;
+} 
+#N #ns3{
+	position: relative;
+	top: 2rem;
+	left: 4.5rem;
+}
+#N #ns4{
+	position: relative;
+	left: 4.5rem;
+}
+#N .medTri{
+	position: relative;
+	left: 1.5rem;
+}
+#O .smlCir{
+	position: relative;
+	top: 2rem;
+	left: 2rem;
+}
+#P #ps2{
+	position: relative;
+	top: 2rem;
+}
+#P .medCir{
+	position: relative;
+	left: 1.5rem;
+	top: -3rem;
+}
+#Q{
+
+}
+#R{
+
+}
+#S{
+
+}
+#T{
+
+}
+#U{
+
+}
+#V{
+
+}
+#W{
+
+}
+#X{
+
+}
+#Y{
+
+}
+#Z{
+
+}
+#n1{
+
+}
+#n2{
+
+}
+#n3{
+
+}
+#n4{
+
+}
+#n5{
+
+}
+#n6{
+
+}
+#n7{
+
+}
+#n8{
+
+}
+#n9{
+
+}
+#n0{
+
+}
+
