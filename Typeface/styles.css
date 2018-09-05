@@ -8,6 +8,7 @@ body{
 }
 .char{
 	margin: 10rem;
+	position: relative;
 }
 
 div{
@@ -90,55 +91,44 @@ div{
 	top:3rem;
 }
 #B #bs2{
-	position: relative;
 	top:2rem;
 }
-#B #bc1{
-position: relative;
+#B #bc1
 	left: 1.5rem;
 }
 #B #bc2{
-	position: relative;
 	/*top:2rem;*/
 	left: 1.5rem;
 }
 #C .smlCir{
-	position: relative;
 	top:2rem;
 	left:4rem;
 }
 #D #ds2{
-	position: relative;
 	top:2rem;
 }
 #E #es2{
-	position: relative;
-	/*top:2rem;*/
+	top:2rem;
 }
 #E #ec1{
-	position: relative;
 	left:3rem;
 }
 #E #ec2{
-	position: relative;
 	left:3rem;
 	top:4rem;
 }
 #E .smlSqr{
-		position: relative;
+
 	left:3rem;
 	top:2rem;
 }
 #F #fs2{
-	position: relative;
 	top: 2rem;
 }
 #F .smlCir{
-	position: relative;
 	left: 3rem;
 }
 #F .smlSqr{
-	position: relative;
 	top: 2rem;
 	left: 3rem;
 }
@@ -148,115 +138,101 @@ position: relative;
 	left: 2rem;
 }
 #H .smlCir{
-	position: relative;
 	top: 2rem;
 	left: 3rem;   
 }
 #H #hs2{
-	position: relative;
 	top: 2rem;
 }
 #H #hs3{
-	position: relative;
 	left: 4rem;
 }
 #H #hs4{
-	position: relative;
 	top: 2rem;
 	left: 4rem;
 }
-#I #is2{
-position: relative;
+#I #is2
 	top: 2rem;
 }
 #J #js1{
-	position: relative;
 	left: 1.5rem;
 }
 #J #js2{
-	position: relative;
 	left: 1.5rem;
 	top: 2rem;
 }
 #J .medCir{
-	position: relative;
 	top: 3rem;
 }
 #K #ks2{     
-	position: relative;
 	top: 2rem;
 }
 #K .medTri{
-	position: relative;
 	left: 1.5rem;
 	top: 2rem;
 }
 #K .smlCir{
-	position: relative;
 	left: 3.5rem;
 }
 #L #ls2{
-	position: relative;
 	top: 2rem;
 }
 #L .smlSqr{
-	position: relative;
 	top: 4rem;
 	left: 3rem;
 }
 #M #ms1{
-	position: relative;
 	top: 2rem;
 }   
 #M #ms2{
-	position: relative;
 	top: 2rem;
 	left: 3rem;
 }
 #M #mt2{
-	position: relative;
 	left: 3rem;
 }
 #N #ns2{
-	position: relative;
 	top: 2rem;
 } 
 #N #ns3{
-	position: relative;
 	top: 2rem;
 	left: 4.5rem;
 }
 #N #ns4{
-	position: relative;
 	left: 4.5rem;
 }
 #N .medTri{
-	position: relative;
 	left: 1.5rem;
 }
 #O .smlCir{
-	position: relative;
 	top: 2rem;
 	left: 2rem;
 }
 #P #ps2{
-	position: relative;
 	top: 2rem;
 }
 #P .medCir{
-	position: relative;
 	left: 1.5rem;
-	top: -3rem;
+	/*top: -3rem;*/
 }
-#Q{
-
+#Q .smlCir{
+	left: 5rem;
+	top: 4rem;
 }
-#R{
-
+#R #rs2{
+	top: 2rem;
 }
-#S{
-
+#R .medCir{
+	left: 1.5rem;
 }
+#R .medTri{
+	left: 1.5rem;
+	top: 2rem;
+}
+#S #sc2{
+	top: 2rem;
+}
+#
 #T{
 
 }
