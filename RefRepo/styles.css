@@ -16,6 +16,7 @@ img{
 	object-fit: cover;
   	width:230px;
 	height:230px;
+	display: inline-block;
 }
 
 .imgBlock{
@@ -23,4 +24,8 @@ img{
 	display:inline-block;
 	margin-bottom: 10px;
 	margin-right: 50px;
+}
+
+#w2_readings ul{
+	max-width: 75%;
 }

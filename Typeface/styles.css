@@ -1,5 +1,5 @@
 html{
-	font-size: 24px;
+	font-size: 48px;
 }
 body{
 	width:100%;
@@ -7,7 +7,7 @@ body{
 	margin: auto;
 }
 .char{
-	margin: 10rem;
+	margin: 5rem;
 	position: relative;
 }
 
