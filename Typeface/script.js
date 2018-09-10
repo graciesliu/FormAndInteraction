@@ -227,4 +227,10 @@ $(document).ready(function() {
 	$("#r36").click(function(){
 		$("span").replaceWith("<h2>WHY</h2>")
 	})	
+
+	// css effects to 40
+
+	$("#r41").click(function(){
+		$(this).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
+	})
 });
