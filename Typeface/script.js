@@ -232,5 +232,7 @@ $(document).ready(function() {
 
 	$("#r41").click(function(){
 		$(this).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
-	})
+	}) 
+
+	
 });

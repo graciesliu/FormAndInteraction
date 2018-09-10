@@ -16,7 +16,7 @@ body{
 }
 
 div{
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 	width: 5rem;
 	height:5rem;
 }
@@ -28,7 +28,7 @@ div{
 	border-left: 1.5rem solid transparent;
 	border-bottom: 3rem solid red;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .lrgTri{
 	width:0px;
@@ -37,7 +37,7 @@ div{
 	border-left: 2.5rem solid transparent;
 	border-bottom: 5rem solid brown;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .medDwnTri{
 	width:0px;
@@ -46,7 +46,7 @@ div{
 	border-left: 1.5rem solid transparent;
 	border-top: 3rem solid turquoise;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .lrgDwnTri{
 	width:0px;
@@ -55,7 +55,7 @@ div{
 	border-left: 2.5rem solid transparent;
 	border-top: 5rem solid blue;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 
 .smlCir{        
@@ -64,7 +64,7 @@ div{
 	border-radius: 1rem;
 	background-color: gray;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .medCir{
 	width: 3rem;
@@ -72,7 +72,7 @@ div{
 	border-radius: 3rem;
 	background-color: black;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .lrgCir{
 	width: 5rem;
@@ -80,7 +80,7 @@ div{
 	border-radius: 5rem;
 	background-color: magenta;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 
 .smlSqr{
@@ -88,14 +88,17 @@ div{
 	height:1rem;
 	background-color: orange;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .medSqr{
 	width: 3rem;
 	height: 3rem;
 	background-color:yellow;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
+}
+.r2{
+	background: blue;
 }
 
 .num{
@@ -134,7 +137,5 @@ div{
 	transform: translate3d(42px, -62px, -135px);
 	transition: .5s;
 }
-#r41:active{
-	
-}
+
 
