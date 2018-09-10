@@ -1,10 +1,13 @@
 html{
-	font-size: 48px;
+	font-size: 24px;
+	font-family: "xants";
+
 }
 body{
 	width:100%;
 	height:100%;
 	margin: auto;
+	mix-blend-mode: screen;
 }
 .char{
 	margin: 1rem;
@@ -95,9 +98,15 @@ div{
 	background-blend-mode: screen;
 }
 
+.num{
+	position: absolute;
+	z-index: 100;
+}
 
 .R .r2{
 	top: 2rem;
+	z-index: 1;
+	color: white;
 }
 .R .medCir{
 	left: 1.5rem;
