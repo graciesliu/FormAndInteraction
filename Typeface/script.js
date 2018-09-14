@@ -234,5 +234,23 @@ $(document).ready(function() {
 		$(this).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
 	}) 
 
+	var t = true;
+	$("#r42").click(function(){
+		if (t==true){
+			$("#r43").hide(1000)
+			t = false
+		}else{
+			$("#r43").show(1000)
+			t = true
+		}
+	})
+
+	var c = 0;
+	$("#r43").click(function(){
+		c++;
+		alert("Ouchies! You've poked me " + c + " times.");
+	})
+
 	
+
 });
