@@ -1,20 +1,33 @@
 html{
-	font-size: 48px;
+	font-size: 14px;
 }
 body{
-	width:100%;
-	height:100%;
 	margin: auto;
-}
-.char{
-	margin: 5rem;
-	position: relative;
+	padding-top: 3rem;
+	padding-left: 2.5rem;
+	background-color: #577343;
+    -webkit-transition: all 5000ms ease;
+            -moz-transition: all 5000ms ease;
+            -ms-transition: all 5000ms ease;
+            -o-transition: all 5000ms ease;
+            transition: all 5000ms ease;
 }
 
-div{
-	background-blend-mode: screen;
+#main{
+	margin: auto;
+	width: 64rem;
+}
+.char-container{
+	margin: 1rem;
+	position: relative;
+	display: inline-block;
 	width: 8rem;
 	height:6rem;
+}
+.char{
+	margin: auto;
+	/*width: 75%;*/
+	/*height: 100%;*/
 }
 
 .medTri{
@@ -22,87 +35,85 @@ div{
 	height:0px;
 	border-right:1.5rem solid transparent;
 	border-left: 1.5rem solid transparent;
-	border-bottom: 3rem solid red;
+	border-bottom: 3rem solid #5CC4EE;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .lrgTri{
 	width:0px;
 	height:0px;
 	border-right:2.5rem solid transparent;
 	border-left: 2.5rem solid transparent;
-	border-bottom: 5rem solid brown;
+	border-bottom: 5rem solid #334D8F;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .medDwnTri{
 	width:0px;
 	height:0px;
 	border-right:1.5rem solid transparent;
 	border-left: 1.5rem solid transparent;
-	border-top: 3rem solid turquoise;
+	border-top: 3rem solid #64E6FF;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .lrgDwnTri{
 	width:0px;
 	height:0px;
 	border-right:2.5rem solid transparent;
 	border-left: 2.5rem solid transparent;
-	border-top: 5rem solid blue;
+	border-top: 5rem solid #1E3054;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 
-.smlCir{        
-	width: 1rem;
-	height: 1rem;
-	border-radius: 1rem;
-	background-color: gray;
-	position: absolute;
-	background-blend-mode: screen;
-}
 .medCir{
 	width: 3rem;
 	height: 3rem;
 	border-radius: 3rem;
-	background-color: black;
+	background-color: #FFB644;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
+}
+.c2{
+	background-color: #FFC869;
+}
+.smlCir{        
+	width: 1rem;
+	height: 1rem;
+	border-radius: 1rem;
+	background-color: #FFD629;
+	position: absolute;
+	mix-blend-mode: screen;
 }
 .lrgCir{
 	width: 5rem;
 	height: 5rem;
 	border-radius: 5rem;
-	background-color: magenta;
+	background-color: #F79C41;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 
 .smlSqr{
 	width: 1rem;
 	height:1rem;
-	background-color: orange;
+	background-color: #AF3C22;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 .medSqr{
 	width: 3rem;
 	height: 3rem;
-	background-color:yellow;
+	background-color: #E7542B;
 	position: absolute;
-	background-blend-mode: screen;
+	mix-blend-mode: screen;
+}
+.s2{
+	background-color: #FF6331;
+	mix-blend-mode: screen; 
 }
 
-
-/*.red{
-	background-color: red; 
-}
-
-.green{
-	background-color: green;
-}
-*/
 #A .smlCir{
 	position: relative;
 	left: 2rem;
@@ -150,10 +161,9 @@ div{
 	top: 2rem;
 	left: 3rem;
 }
-#G .medSqr{
-	position:relative;
+#G .medDwnTri{
 	top: 2rem;
-	left: 2rem;
+	left: 3rem;
 }
 #H .smlCir{
 	top: 2rem;
@@ -209,18 +219,15 @@ div{
 #M #mt2{
 	left: 3rem;
 }
-#N #ns2{
+#N #ns1{
 	top: 2rem;
 } 
-#N #ns3{
+#N #ns2{
+	left: 3rem;
+}
+#N .medDwnTri{
 	top: 2rem;
-	left: 4.5rem;
-}
-#N #ns4{
-	left: 4.5rem;
-}
-#N .medTri{
-	left: 1.5rem;
+	left: 3rem;
 }
 #O .smlCir{
 	top: 2rem;
@@ -249,6 +256,7 @@ div{
 }
 #S #sc2{
 	top: 2rem;
+	left: .5rem;
 }
 #S #sc3{
 	top:1rem;
@@ -256,6 +264,7 @@ div{
 }
 #S #sc4{
 	top:3rem;
+	left: .5rem;
 }
 #T #ts1{
 	left: 1rem;
@@ -264,14 +273,15 @@ div{
 	left: 1rem;
 	top: 2rem;
 }
-#T #tc2{
+#T #ts3{
 	left: 4rem;
 }
 #U #us2{
 	left: 2rem;
 }
-#V{
-
+#V .smlCir{
+	top: 1rem;
+	left: 2rem;
 }
 #W #ws2{
 	left: 3rem;
@@ -297,12 +307,11 @@ div{
 	left: 1rem;
 }
 #Z .medTri{
-	left: 1rem;
 	top: 2rem;
 }
 #Z #zc2{
 	top: 4rem;
-	left: 4rem;
+	left: 3rem;
 }
 #n1 #OneS1{
 	left: 1rem;
@@ -341,10 +350,10 @@ div{
 	top: 1rem;
 }
 #n7 #SevS1{
-	left: 2.5rem;
+	left: 1.5rem;
 }
 #n7 #SevS2{
-	left: 2.5rem;
+	left: 1.5rem;
 	top: 2rem;
 }
 #n8 #EightC2{

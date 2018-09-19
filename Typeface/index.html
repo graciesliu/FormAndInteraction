@@ -4,315 +4,378 @@
 <head>
 	<title>Mouse Events</title>
 	<link rel="stylesheet" href=styles.css>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script2.js"></script>
 </head>
 <body>
-<!-- 	<div class="char"></div>
 
-	<div class="smlCir"></div>
-	<div class="smlSqr"></div>
-
-	<div class="medTri"></div>
-	<div class="lrgDwnTri"></div>
-	<div class="medCir"></div>
-	<div class="medSqr"></div>
-	<div class="medSqr"></div>
-
-	<div class="lrgTri"></div>
-	<div class="lrgDwnTri"></div>
-	<div class="lrgCir"></div> -->
-
+<!-- main content section -->
+<div id="main">
 <!-- A -->
-	<div class="char" id="A">
-		<div class="lrgTri"></div>
-		<div class="smlCir"></div>
+	<div class="char-container" id="A">
+		<div class="char">
+			<div class="lrgTri"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- B -->
-	<div class="char" id="B">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="bs2"></div>
-		<div class="medCir" id="bc1"></div>
-		<div class="medCir" id="bc2"></div>
+	<div class="char-container" id="B">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="bs2"></div>
+			<div class="medCir" id="bc1"></div>
+			<div class="medCir" id="bc2"></div>
+		</div>
 	</div> 
 
 
 <!-- C -->
-	<div class="char" id="C">
-		<div class="lrgCir"></div>
-		<div class="smlCir"></div>
+	<div class="char-container" id="C">
+		<div class="char">
+			<div class="lrgCir"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- D -->
-	<div class="char" id="D">
-		<div class="lrgCir"></div>
-		<div class="medSqr"></div>
-		<div class="medSqr" id="ds2"></div>
+	<div class="char-container" id="D">
+		<div class="char">
+			<div class="lrgCir"></div>
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="ds2"></div>
+		</div>
 	</div>
 
 
 <!-- E -->
-	<div class="char" id="E">
-		<div class="smlCir" id="ec1"></div>
-		<div class="smlCir" id="ec2"></div>
-		<div class="smlSqr"></div>
-		<div class="medSqr" id="es2"></div>
-		<div class="medSqr"></div>
+	<div class="char-container" id="E">
+		<div class="char">
+			<div class="smlCir" id="ec1"></div>
+			<div class="smlCir" id="ec2"></div>
+			<div class="smlSqr"></div>
+			<div class="medSqr s2" id="es2"></div>
+			<div class="medSqr"></div>
+		</div>
 	</div>
 
 
 <!-- F -->
-	<div class="char" id="F">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="fs2"></div>
-		<div class="smlCir"></div>
-		<div class="smlSqr"></div>
+	<div class="char-container" id="F">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="fs2"></div>
+			<div class="smlCir"></div>
+			<div class="smlSqr"></div>
+		</div>
 	</div>
 
 
 <!-- G -->
-	<div class="char" id="G">
-		<div class="lrgCir"></div>
-		<div class="medSqr"></div>
+	<div class="char-container" id="G">
+		<div class="char">
+			<div class="lrgCir"></div>
+			<div class="medDwnTri"></div>
+		</div>
 	</div>
 
 
 <!-- H -->
-	<div class="char" id="H">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="hs2"></div>
-		<div class="medSqr" id="hs3"></div>
-		<div class="medSqr" id="hs4"></div>
-		<div class="smlCir"></div>
+	<div class="char-container" id="H">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="hs2"></div>
+			<div class="medSqr s2" id="hs3"></div>
+			<div class="medSqr" id="hs4"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- I -->
-	<div class="char" id="I">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="is2"></div>
+	<div class="char-container" id="I">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="is2"></div>
+		</div>
 	</div>
 
 
 <!-- J -->
-	<div class="char" id="J">
-		<div class="medSqr" id="js1"></div>
-		<div class="medSqr" id="js2"></div>
-		<div class="medCir"></div>
+	<div class="char-container" id="J">
+		<div class="char">
+			<div class="medSqr" id="js1"></div>
+			<div class="medSqr s2" id="js2"></div>
+			<div class="medCir"></div>
+		</div>
 	</div>
 
 
 <!-- K -->
-	<div class="char" id="K">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="ks2"></div>
-		<div class="medTri"></div>
-		<div class="smlCir"></div>
+	<div class="char-container" id="K">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="ks2"></div>
+			<div class="medTri"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- L -->
-	<div class="char" id="L">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="ls2"></div>
-		<div class="smlSqr"></div>
+	<div class="char-container" id="L">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="ls2"></div>
+			<div class="smlSqr"></div>
+		</div>
 	</div>
 
 
 <!-- M -->
-	<div class="char" id="M">
-		<div class="medSqr" id="ms1"></div>
-		<div class="medSqr" id="ms2"></div>
-		<div class="medTri"></div>
-		<div class="medTri" id="mt2"></div>
+	<div class="char-container" id="M">
+		<div class="char">
+			<div class="medSqr" id="ms1"></div>
+			<div class="medSqr s2" id="ms2"></div>
+			<div class="medTri"></div>
+			<div class="medTri" id="mt2"></div>
+		</div>
 	</div>
 
 
 <!-- N -->
-	<div class="char" id="N">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="ns2"></div>
-		<div class="medSqr" id="ns3"></div>
-		<div class="medSqr" id="ns4"></div>
-		<div class="medTri"></div>
+	<div class="char-container" id="N">
+		<div class="char">
+			<div class="medSqr" id="ns1"></div>
+			<div class="medSqr s2" id="ns2"></div>
+			<div class="medTri"></div>
+			<div class="medDwnTri"></div>
+		</div>
 	</div>
 
 
 <!-- O -->
-	<div class="char" id="O">
-		<div class="lrgCir"></div>
-		<div class="smlCir"></div>
+	<div class="char-container" id="O">
+		<div class="char">
+			<div class="lrgCir"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- P -->
-	<div class="char" id="P">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="ps2"></div>
-		<div class="medCir"></div>
+	<div class="char-container" id="P">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="ps2"></div>
+			<div class="medCir"></div>
+		</div>
 	</div>
 
 
 <!-- Q -->
-	<div class="char" id="Q">
-		<div class="lrgCir"></div>
-		<div class="smlCir"></div>
+	<div class="char-container" id="Q">
+		<div class="char">
+			<div class="lrgCir"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- R -->
-	<div class="char" id="R">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="rs2"></div>
-		<div class="medCir"></div>
-		<div class="medTri"></div>
+	<div class="char-container" id="R">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="rs2"></div>
+			<div class="medCir"></div>
+			<div class="medTri"></div>
+		</div>
 	</div>
 
 
 <!-- S -->
-	<div class="char" id="S">
-		<div class="medCir"></div>
-		<div class="medCir" id="sc2"></div>
-		<div class="smlCir" id="sc3"></div>
-		<div class="smlCir" id="sc4"></div>
+	<div class="char-container" id="S">
+		<div class="char">
+			<div class="medCir"></div>
+			<div class="medCir" id="sc2"></div>
+			<div class="smlCir" id="sc3"></div>
+			<div class="smlCir" id="sc4"></div>
+		</div>
 	</div>
 
 
 <!-- T -->
-	<div class="char" id="T">
-		<div class="medSqr" id="ts1"></div>
-		<div class="medSqr" id="ts2"></div>
-		<div class="smlCir"></div>
-		<div class="smlCir" id="tc2"></div>
+	<div class="char-container" id="T">
+		<div class="char">
+			<div class="medSqr" id="ts1"></div>
+			<div class="medSqr s2" id="ts2"></div>
+			<div class="smlSqr" id="ts3"></div>
+			<div class="smlSqr" id="ts4"></div>
+		</div>
 	</div>
 
 
 <!-- U -->
-	<div class="char" id="U">
-		<div class="lrgCir"></div>
-		<div class="medSqr"></div>
-		<div class="medSqr" id="us2"></div>
+	<div class="char-container" id="U">
+		<div class="char">
+			<div class="lrgCir"></div>
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="us2"></div>
+		</div>
 	</div>
 
 
 <!-- V -->
-	<div class="char" id="V">
-		<div class="lrgDwnTri"></div>
+	<div class="char-container" id="V">
+		<div class="char">
+			<div class="lrgDwnTri"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- W -->
-	<div class="char" id="W">
-		<div class="medSqr"></div>
-		<div class="medSqr" id="ws2"></div>
-		<div class="medDwnTri" id="wt1"></div>
-		<div class="medDwnTri" id="wt2"></div>
+	<div class="char-container" id="W">
+		<div class="char">
+			<div class="medSqr"></div>
+			<div class="medSqr s2" id="ws2"></div>
+			<div class="medDwnTri" id="wt1"></div>
+			<div class="medDwnTri" id="wt2"></div>
+		</div>
 	</div>
 
 
 <!-- X -->
-	<div class="char" id="X">
-		<div class="lrgDwnTri"></div>
-		<div class="lrgTri"></div>
+	<div class="char-container" id="X">
+		<div class="char">
+			<div class="lrgDwnTri"></div>
+			<div class="lrgTri"></div>
+		</div>
 	</div>
 
 
 <!-- Y -->
-	<div class="char" id="Y">
-		<div class="lrgDwnTri"></div>
-		<div class="medSqr" id="ys1"></div>
-		<div class="medSqr" id="ys2"></div>
+	<div class="char-container" id="Y">
+		<div class="char">
+			<div class="lrgDwnTri"></div>
+			<div class="medSqr" id="ys1"></div>
+			<div class="medSqr s2" id="ys2"></div>
+		</div>
 	</div>
 
 
 <!-- Z -->
-	<div class="char" id="Z">
-		<div class="medDwnTri"></div>
-		<div class="medTri"></div>
-		<div class="smlCir"></div>
-		<div class="smlCir" id="zc2"></div>
+	<div class="char-container" id="Z">
+		<div class="char">
+			<div class="medDwnTri"></div>
+			<div class="medTri"></div>
+			<div class="smlCir"></div>
+			<div class="smlCir" id="zc2"></div>
+		</div>
 	</div>
 
 
 <!-- 1 -->
-	<div class="char" id="n1">
-		<div class="medSqr" id="OneS1"></div>
-		<div class="medSqr" id="OneS2"></div>
-		<div class="smlCir"></div>
+	<div class="char-container" id="n1">
+		<div class="char">
+			<div class="medSqr" id="OneS1"></div>
+			<div class="medSqr s2" id="OneS2"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- 2 -->
-	<div class="char" id="n2">
-		<div class="medCir"></div>
-		<div class="medTri"></div>
+	<div class="char-container" id="n2">
+		<div class="char">
+			<div class="medCir"></div>
+			<div class="medTri"></div>
+		</div>
 	</div>
 
 
 <!-- 3 -->
-	<div class="char" id="n3">
-		<div class="medCir"></div>
-		<div class="medCir" id="ThreeC2"></div>
-		<div class="smlCir" id="ThreeC3"></div>
-		<div class="smlCir" id="ThreeC4"></div>
+	<div class="char-container" id="n3">
+		<div class="char">
+			<div class="medCir"></div>
+			<div class="medCir" id="ThreeC2"></div>
+			<div class="smlCir" id="ThreeC3"></div>
+			<div class="smlCir" id="ThreeC4"></div>
+		</div>
 	</div>
 
 
 <!-- 4 -->
-	<div class="char" id="n4">
-		<div class="medSqr" id="FourS1"></div>
-		<div class="medSqr" id="FourS2"></div>
-		<div class="medTri"></div>
+	<div class="char-container" id="n4">
+		<div class="char">
+			<div class="medSqr" id="FourS1"></div>
+			<div class="medSqr s2" id="FourS2"></div>
+			<div class="medTri"></div>
+		</div>
 	</div>
 
 
 <!-- 5 -->
-	<div class="char" id="n5">
-		<div class="medCir"></div>
-		<div class="medTri"></div>
-		<div class="medSqr"></div>
+	<div class="char-container" id="n5">
+		<div class="char">
+			<div class="medCir"></div>
+			<div class="medTri"></div>
+			<div class="medSqr"></div>
+		</div>
 	</div>
 
 
 <!-- 6 -->
-	<div class="char" id="n6">
-		<div class="medCir"></div>
-		<div class="medCir" id="SixC2"></div>
-		<div class="smlCir"></div>
-	</div>
+	<div class="char-container" id="n6">
+		<div class="char">
+			<div class="medCir"></div>
+			<div class="medCir" id="SixC2"></div>
+			<div class="smlCir"></div>
+		</div>
 	</div>
 
 
 <!-- 7 -->
-	<div class="char" id="n7">
-		<div class="medSqr" id="SevS1"></div>
-		<div class="medSqr" id="SevS2"></div>
-		<div class="lrgDwnTri"></div>
+	<div class="char-container" id="n7">
+		<div class="char">
+			<div class="medSqr" id="SevS1"></div>
+			<div class="medSqr s2" id="SevS2"></div>
+			<div class="medDwnTri"></div>
+		</div>
 	</div>
 
 
 <!-- 8 -->
-	<div class="char" id="n8">
-		<div class="medCir"></div>
-		<div class="medCir" id="EightC2"></div>
+	<div class="char-container" id="n8">
+		<div class="char">
+			<div class="medCir"></div>
+			<div class="medCir" id="EightC2"></div>
+		</div>
 	</div>
 
 
 <!-- 9 -->
-	<div class="char" id="n9">
-		<div class="medCir"></div>
-		<div class="medSqr" id="NineS1"></div>
-		<div class="medSqr" id="NineS2"></div>
+	<div class="char-container" id="n9">
+		<div class="char">
+			<div class="medCir"></div>
+			<div class="medSqr" id="NineS1"></div>
+			<div class="medSqr s2" id="NineS2"></div>
+		</div>
 	</div>
 
 
 <!-- 0 -->
-	<div class="char" id="n0">
-		<div class="lrgCir"></div>
+	<div class="char-container" id="n0">
+		<div class="char">
+			<div class="lrgCir"></div>
+		</div>
 	</div>
-
-
+</div>
 </body>
 </html>
 
