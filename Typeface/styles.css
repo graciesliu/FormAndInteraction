@@ -6,7 +6,7 @@ body{
 	padding-top: 5rem;
 	padding-left: 2.5rem;
 	background-color: #577343;
-	/*overflow: hidden;*/
+	overflow: hidden;
     -webkit-transition: all 5000ms ease;
             -moz-transition: all 5000ms ease;
             -ms-transition: all 5000ms ease;
