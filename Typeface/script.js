@@ -131,7 +131,6 @@ $(document).ready(function() {
 	})	
 
 	$("#r20").click(function(){
-
 		$(".char").animate({"bottom":"50px"}, 1000, function(){
 			$(".char").animate({"left":"50px"}, 1000, function(){
 				$(".char").animate({"top":"50px"}, 1000, function(){
