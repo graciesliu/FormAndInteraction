@@ -111,4 +111,26 @@ a{
 .giph{
 	position: fixed;
 }
+.multi{
+	position: fixed;
+	height: 20px;
+	width: 20px;
+	left: 25%;
+}
+.m1{
+	top: 100px;
+}
+.m2{
+	top: 200px;
+}
+.m3{
+top: 300px;
+}
+.m4{
+	top: 400px;
+}
+.m5{
+	top: 500px;
+}
+
 
