@@ -1,0 +1,38 @@
+html, body{
+	width: 100%;
+	height:100%;
+}
+
+.skrollr-container{
+	width: 100%;
+	height:100%;
+	overflow:hidden;
+	position: absolute;
+}
+.skrollr-container div{
+	position: fixed;
+}
+.set
+.multi{
+	position: fixed;
+	height: 6%;
+	width: 10.25%;
+	left: 44%;
+}
+.m1{
+	top: 25%;
+}
+.m2{
+	top: 35%;
+}
+.m3{
+	top: 45%;
+}
+.m4{
+	top: 55%;
+}
+.m5{
+	top: 65%;
+}
+
+
