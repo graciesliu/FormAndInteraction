@@ -2,6 +2,9 @@ html, body{
 	width: 100%;
 	height:100%;
 	background-color: black;
+	color: white;
+	margin: 0;
+	padding: 0;
 }
 
 .skrollr-container{
@@ -127,15 +130,14 @@ html, body{
 }
 
 .cir{
-	mix-blend-mode: screen;
+	mix-blend-mode: exclusion;
 	position: fixed;
 	/*background-color: white;*/
-	background-color: red;
+	background-color: rgb(255,0,0);
 	height: 20px;
 	width: 20px;
 	border-radius: 50%;
 	left: 51%;
-	top: 23%;
 	z-index: 1;
 	-webkit-transition: all ease;
     -moz-transition: all ease;
@@ -168,22 +170,22 @@ html, body{
 }
 
 #set1 .cir{
-	top: 0;
+	bottom: 10%;
 	left: 10%;
 }
 #set2 .cir{
-	top: 20%;
+	bottom: 10%;
 	left: 30%;
 }
 #set3 .cir{
-	top: 40%;
+	bottom: 10%;
 	left: 50%;
 }
 #set4 .cir{
-	top: 60%;
+	bottom: 10%;
 	left: 70%;
 }
 #set5 .cir{
-	top: 80%;
+	bottom: 10%;
 	left: 90%;
 }
