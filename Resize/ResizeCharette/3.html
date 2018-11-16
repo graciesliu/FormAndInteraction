@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="css/main3.css" />
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		$(window).resize(function(){
+			var r = Math.floor((Math.random() * 255) + 1);
+			var g = Math.floor((Math.random() * 255) + 1);
+			var b = Math.floor((Math.random() * 255) + 1);
+			var r2 = Math.floor((Math.random() * 255) + 1);
+			var g2 = Math.floor((Math.random() * 255) + 1);
+			var b2 = Math.floor((Math.random() * 255) + 1);
+			console.log("resize");
+			$(".o").css("color", "rgb("+r+","+g+","+b+")");
+			$(".w").css("color", "rgb("+r+","+g+","+b+")");
+			$("body").css("background-color","rgb("+r2+","+g2+","+b2+")");
+			
+		})
+		var r3 = Math.floor((Math.random() * 255) + 1);
+		var g3 = Math.floor((Math.random() * 255) + 1);
+		var b3 = Math.floor((Math.random() * 255) + 1);
+		$(".o:hover").css("color", "rgb("+r3+","+g3+","+b3+")");
+		var r4 = Math.floor((Math.random() * 255) + 1);
+		var g4 = Math.floor((Math.random() * 255) + 1);
+		var b4 = Math.floor((Math.random() * 255) + 1);
+		$(".w:hover").css("color", "rgb("+r4+","+g4+","+b4+")");
+		console.log(r);
+		console.log(g);
+		console.log(b);
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	<style type="text/css">
+		p{
+			margin: auto;
+			padding: 0;
+			line-height: 0;
+			/*width:30%;*/
+			font-size: 11.8rem;
+			font-family: 'Monoton', cursive;
+			z-index: 3;
+			position: relative;
+			color: DarkSeaGreen;
+			top:30%;
+			left: 0%;
+			display: inline-block;
+			transition: .5s;
+		}
+		.o:hover{
+			color: deeppink;
+		}
+		.w:hover{
+			color: lime;
+		}
+		body{
+			background-color: AliceBlue;
+			transition: 5s;
+		}
+		@keyframes corner{
+			from{border-radius: 0%;}
+			to{border-radius: 100%;}
+		}
+		.box{
+			animation-name: corner;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-duration: 20s;
+			animation-timing-function: ease;
+			position: relative;
+			/*top: 10%;*/
+			/*left: 50%;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p class="o" id="o1">o</p>
+		<p class="w" id="w1">w</p>
+		<p class="o" id="o2">o</p>
+		<p class="w" id="w2">w</p>
+		<p class="o" id="o3">o</p>
+		<p class="w" id="w3">w</p>
+		<p class="o" id="o4">o</p>
+		<p class="w" id="w4">w</p>
+		<p class="o" id="o5">o</p>
+		<p class="we" id="w5">w</p>
+		<p class="o" id="o6">o</p>
+		<p class="w" id="w6">w</p>
+		<p class="o" id="o7">o</p>
+		<p class="w" id="w7">w</p>
+		<p class="o" id="o8">o</p>
+		<p class="w" id="w8">w</p>
+		<p class="o" id="o9">o</p>
+		<p class="w" id="w9">w</p>
+		<p class="o" id="o10">o</p>
+		<p class="w" id="w10">w</p>
+		<p class="o" id="o11">o</p>
+		<p class="w" id="w11">w</p>
+		<p class="o" id="o12">o</p>
+		<p class="w" id="w12">w</p>
+		<p class="o" id="o13">o</p>
+		<p class="w" id="w13">w</p>
+		<p class="o" id="o14">o</p>
+		<p class="w" id="w14">w</p>
+		<p class="o" id="o15">o</p>
+		<p class="w" id="w15">w</p>
+		<p class="o" id="o16">o</p>
+		<p class="w" id="w16">w</p>
+		<p class="o" id="o17">o</p>
+		<p class="w" id="w17">w</p>
+		<p class="o" id="o18">o</p>
+		<p class="w" id="w18">w</p>
+		<p class="o" id="o19">o</p>
+		<p class="w" id="w19">w</p>
+		<p class="o" id="o20">o</p>
+		<p class="w" id="w20">w</p>
+		<p class="o" id="o21">o</p>
+		<p class="w" id="w21">w</p>
+		<p class="o" id="o22">o</p>
+		<p class="w" id="w22">w</p>
+		<p class="o" id="o23">o</p>
+		<p class="w" id="w23">w</p>
+		<p class="o" id="o24">o</p>
+		<p class="w" id="w24">w</p>
+		<p class="o" id="o25">o</p>
+		<p class="w" id="w25">w</p>
+		<p class="o" id="o26">o</p>
+		<p class="w" id="w26">w</p>
+		<p class="o" id="o27">o</p>
+		<p class="w" id="w27">w</p>
+		<p class="o" id="o28">o</p>
+		<p class="w" id="w28">w</p>
+		<p class="o" id="o29">o</p>
+		<p class="w" id="w29">w</p>
+		<p class="o" id="o30">o</p>
+		<p class="w" id="w30">w</p>
+		<p class="o" id="o31">o</p>
+		<p class="w" id="w31">w</p>
+		<p class="o" id="o32">o</p>
+		<p class="w" id="w32">w</p>
+		<p class="o" id="o33">o</p>
+		<p class="w" id="w33">w</p>
+		<p class="o" id="o34">o</p>
+		<p class="w" id="w34">w</p>
+		<p class="o" id="o35">o</p>
+		<p class="w" id="w35">w</p>
+		<p class="o" id="o36">o</p>
+		<p class="w" id="w36">w</p>
+		<p class="o" id="o37">o</p>
+		<p class="w" id="w37">w</p>
+		<p class="o" id="o38">o</p>
+		<p class="w" id="w38">w</p>
+		<p class="o" id="o39">o</p>
+		<p class="w" id="w39">w</p>
+		<p class="o" id="o40">o</p>
+		<p class="w" id="w40">w</p>
+		<p class="o" id="o41">o</p>
+		<p class="w" id="w41">w</p>
+		<p class="o" id="o42">o</p>
+		<p class="w" id="w42">w</p>
+		<p class="o" id="o43">o</p>
+		<p class="w" id="w43">w</p>
+		<p class="o" id="o44">o</p>
+		<p class="w" id="w44">w</p>
+		<p class="o" id="o45">o</p>
+		<p class="w" id="w45">w</p>
+		<p class="o" id="o46">o</p>
+		<p class="w" id="w46">w</p>
+		<p class="o" id="o47">o</p>
+		<p class="w" id="w47">w</p>
+		<p class="o" id="o48">o</p>
+		<p class="w" id="w48">w</p>
+		<p class="o" id="o49">o</p>
+		<p class="w" id="w49">w</p>
+		<p class="o" id="o50">o</p>
+		<p class="w" id="w50">w</p>
+		<p class="o" id="o51">o</p>
+		<p class="w" id="w51">w</p>
+		<p class="o" id="o52">o</p>
+		<p class="w" id="w52">w</p>
+		<p class="o" id="o53">o</p>
+		<p class="w" id="w53">w</p>
+		<p class="o" id="o54">o</p>
+		<p class="w" id="w54">w</p>
+		<p class="o" id="o55">o</p>
+		<p class="w" id="w55">w</p>
+		<p class="o" id="o56">o</p>
+		<p class="w" id="w56">w</p>
+		<p class="o" id="o57">o</p>
+		<p class="w" id="w57">w</p>
+		<p class="o" id="o58">o</p>
+		<p class="w" id="w58">w</p>
+		<p class="o" id="o59">o</p>
+		<p class="w" id="w59">w</p>
+		<p class="o" id="o60">o</p>
+		<p class="w" id="w60">w</p>
+		<p class="o" id="o61">o</p>
+		<p class="w" id="w61">w</p>
+		<p class="o" id="o62">o</p>
+		<p class="w" id="w62">w</p>
+		<p class="o" id="o63">o</p>
+		<p class="w" id="w63">w</p>
+		<p class="o" id="o64">o</p>
+		<p class="w" id="w64">w</p>
+		<p class="o" id="o65">o</p>
+		<p class="w" id="w65">w</p>
+		<p class="o" id="o66">o</p>
+		<p class="w" id="w66">w</p>
+		<p class="o" id="o67">o</p>
+		<p class="w" id="w67">w</p>
+		<p class="o" id="o68">o</p>
+		<p class="w" id="w68">w</p>
+		<p class="o" id="o69">o</p>
+		<p class="w" id="w69">w</p>
+		<p class="o" id="o70">o</p>
+		<p class="w" id="w70">w</p>
+		<p class="o" id="o71">o</p>
+		<p class="w" id="w71">w</p>
+		<p class="o" id="o72">o</p>
+		<p class="w" id="w72">w</p>
+		<p class="o" id="o73">o</p>
+		<p class="w" id="w73">w</p>
+		<p class="o" id="o74">o</p>
+		<p class="w" id="w74">w</p>
+		<p class="o" id="o75">o</p>
+		<p class="w" id="w75">w</p>
+		<p class="o" id="o76">o</p>
+		<p class="w" id="w76">w</p>
+		<p class="o" id="o77">o</p>
+		<p class="w" id="w77">w</p>
+		<p class="o" id="o78">o</p>
+		<p class="w" id="w78">w</p>
+		<p class="o" id="o79">o</p>
+		<p class="w" id="w79">w</p>
+		<p class="o" id="o80">o</p>
+		<p class="w" id="w80">w</p>
+		<p class="o" id="o81">o</p>
+		<p class="w" id="w81">w</p>
+		<p class="o" id="o82">o</p>
+		<p class="w" id="w82">w</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		$(window).resize(function(){
+			var w = window.innerWidth;
+			var h = window.innerHeight;
+			var rad = w/max-width*100%;
+			var scl = h/max-height*100;
+			$(".box").css("border-radius","rad");
+			$(".box").css("transform","scale(scl,scl");
+
+		})
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Kumar+One+Outline" rel="stylesheet">
+	<style type="text/css">
+		p{
+			margin: 0 auto;
+			width:30%;
+			font-size: 12rem;
+			font-family: 'Kumar One Outline', cursive;
+		}
+		body{
+			background-image: linear-gradient(red, yellow);
+		}
+		.box{
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<p id="yes">yes</p>
+			<p id="no">no</p>
+		</div>
+	</div>
+</body>
+</html>
