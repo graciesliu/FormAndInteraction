@@ -3,44 +3,48 @@
 <head>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/wqf8ggn.css">
 	<script type="text/javascript">
 		$(document).ready(function() {
-			var w = window.innerWidth*.01;
+			var w = window.innerWidth*.008;
 			$(".box").css("width",w);
 			var h = window.innerHeight*.33;
 			$(".box").css("height",h);
 			var bdr = window.innerWidth/1200*100+window.innerWidth/1200*18;
-			$(".box").css("border",bdr+"px solid white");
+			$(".box").css("border",bdr+"px solid black");
 			var p = window.innerHeight/750*100/1.5;
 			$(".box").css("border-image","url("+currentImg+") "+p+" round");
 			$(".box").css("box-sizing","border-box")
 
 		var t=true;
 		$(window).resize(function(){
-			$(".intro-screen").fadeOut(2000);
-			var ww = window.innerWidth*.01;
-			$(".box").css("width",ww);
-			var hh = window.innerHeight*.33;
-			$(".box").css("height",hh);
-			var bdr = window.innerWidth/1200*100+window.innerWidth/1200*18;
-			$(".box").css("border",bdr+"px solid white");
+			$(".black-cover").fadeOut(2000);
+			// var ww = window.innerWidth*.1;
+			// var hh = window.innerHeight*.3;
+			// $(".box").css("width",ww);
+			// $(".box").css("height",hh);
+
+			if(window.innerWidth>=window.innerHeight){
+				var bdr = window.innerWidth/1200*100+window.innerWidth/1200*18;
+				$(".box").css("border-width",bdr+"px");
+			}else{
+				var bdr = window.innerHeight/1200*100+window.innerHeight/1200*18;
+				$(".box").css("border-width",bdr+"px");
+			}
 			var p = window.innerHeight/750*100/1.5;
 			$(".box").css("border-image","url("+currentImg+") "+p+" round");
 
 			var r = window.innerWidth
 			$(".top-set .box").css("transform","rotate("+r+"deg)")
 			$(".bottom-set .box").css("transform","rotate(-"+r+"deg)")
-
-			var r2 = Math.floor((Math.random() * 100) + 1);
-			var g2 = Math.floor((Math.random() * 100) + 1);
-			var b2 = Math.floor((Math.random() * 100) + 1);
-			$("body").css("background-color","rgb("+r2+","+g2+","+b2+")");
 		})
 
 		var c = 0;
 		var currentImg = "bi1.png";
 		var imgArray = ["bi1.png","bi2.png","bi3.png","bi4.png","bi5.png",null]
-		$(".box").click(function(){
+		$("#right").click(function(){
+			$(".corner").css("filter","none");
+			$(".nav").css("filter","none");
 			console.log(c);
 			console.log(imgArray[c]);
 			if(c<5){
@@ -50,18 +54,64 @@
 			}
 			currentImg = imgArray[c];
 			$(".box").css("border-image-source","url("+imgArray[c]+")");
+			if(currentImg==null){
+				$(".corner").css("filter","invert(100%)");
+				$(".nav").css("filter","invert(100%)");
+			}
+		})
+		$("#left").click(function(){
+			var r2 = Math.floor((Math.random() * 255) + 100);
+			var g2 = Math.floor((Math.random() * 255) + 100);
+			var b2 = Math.floor((Math.random() * 255) + 100);
+			$("body").css("background-color","rgb("+r2+","+g2+","+b2+")");
+		})
+		var t = true;
+		$("#up").click(function(){
+			if(t==true){
+				t=false;
+				$("body").addClass("inverted");
+			}else{
+				t=true;
+				$("body").removeClass("inverted");
+			}
+		})
+		$("#down").click(function(){
+			for(var i=1; i<=30; i++){
+				if(i%3==1){
+					$(".b"+i).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400)
+				}
+				if(i%3==2){
+					$(".b"+i).fadeOut(800).fadeIn(800).fadeOut(800).fadeIn(800).fadeOut(800).fadeIn(800).fadeOut(800).fadeIn(800)
+				}
+				if(i%3==0){
+					$(".b"+i).fadeOut(1200).fadeIn(1200).fadeOut(1200).fadeIn(1200).fadeOut(1200).fadeIn(1200).fadeOut(1200).fadeIn(1200)
+				}
+			}
+		})
+		$("#bottom-right").click(function(){
+			window.width(800);
+			window.height("800px");
 		})
 	})
 	</script>
 	<style type="text/css">
 		body{
-			background-color: black;
+			background-color: white;
 			transition: 5s;
 			margin: 0;
 			padding: 0;
 			mix-blend-mode: screen;
 			width: 100%;
 			height: 100%;
+		}
+		body.inverted{
+			filter: invert(100%);
+			background-color: white;
+			animation: none;
+		}
+		@keyframes op{
+			from{opacity: 1}
+			to{opacity: .3}
 		}
 		.box{
 			margin: 0;
@@ -73,17 +123,20 @@
 			/*border: 10px solid white;*/
 			border-image: url("border.png") 100px round;
 			/*height: 33.33%;*/
-			/*width: 20%;*/
-			transition: transform 5s ease;			
+			width: 19%;
+			transition: transform 10s ease;			
 			box-sizing: border-box;
 			mix-blend-mode: exclusion;
 			/*box-shadow: 0px 0px 0px 1px #ffffff;*/
 			border-radius: 50px;
-			/*animation: bdr-rad 1s linear infinite alternate;*/
+			animation: op 10s ease 5s infinite alternate;
+			left: .4%;
 		}
 
 		span{
 			transition: border-image-slice 2s ease;
+			margin: 0;
+			padding-top: 0;
 		}
 /*		@keyframes bdr-rad{
 			0%{border-radius: 50px}
@@ -102,128 +155,189 @@
 		.row{
 			width: 100%;
 			height: 30%;
-			margin: 0;
 			padding: 0;
 			mix-blend-mode: screen;
-
 		}
 		.bottom-set{
-			position: absolute;
+			position: fixed;
 			mix-blend-mode: overlay;
 			animation: blr-anim 5s linear 2s infinite alternate;
+			align-items: center;
+
 		}
 		.top-set{
-			position: absolute;
+			position: fixed;
 			mix-blend-mode: overlay;
+			align-items: center;
 		}
 		
 		.intro-screen{
-			position: absolute;
+			position: fixed;
 			height: 100%;
 			width: 100%;
 			z-index: 2;
+			margin: 0;
+			padding: 0;
 		}
 		.black-cover{
-			position: absolute;
+			position: fixed;
 			height: 100%;
 			width: 100%;
-			background-color: gray;
-			opacity: .8;
+			background-color: white;
+			opacity: .9;
 			mix-blend-mode: multiply;
 			z-index: 3;
 		}
 		.corner{
-			width: 2rem;
-			height: 2rem;
-			position: absolute;
+			width: 3rem;
+			height: 3rem;
+			position: fixed;
 			z-index: 4;
-		}
-		h1{
+			color: black;
 			font-size: 4rem;
-			letter-spacing: 2px;
-			margin: auto;
-			position: absolute;
-			color: white;
-			z-index: 5;
-			top: 40%;
-			left: 45%;
+			font-family: chapman, sans-serif;
 		}
 		#top-left{
-			top:50px;
+			top:25px;
 			left: 50px;
-			transform: rotate(180deg);
 		}
 		#top-right{
-			top:50px;
-			right: 50px;
-			transform: rotate(-90deg);
-
+			top:25px;
+			right: 100px;
 		}
 		#bottom-left{
-			bottom:50px;
+			bottom:75px;
 			left: 50px;
-			transform: rotate(90deg);
 		}
 		#bottom-right{
 			bottom:50px;
 			right: 50px;
+			/*border-radius: 50%;*/
+		}
+		#bottom-right:hover{
+			background-color: yellow;
+		}
+		.nav{
+			height: 6rem;
+			width: 6rem;
+			position: fixed;
+			z-index: 4;
+			transition: transform 1s ease;
+			border-radius: 50%;
+		}
+		#up{
+			top: -3rem;
+			transform: rotate(90deg);
+			left: 50%;
+		}
+		#up:hover{
+			transform: translate(0,1rem);
+			background-color: white;
+		}
+		#up:active{
+			background-color: red;
+		}
+		#down{
+			bottom: -3rem;
+			transform: rotate(90deg);
+			left: 50%;
+		}
+		#down:hover{
+			transform: translate(0,-1rem);
+			background-color: white;
+		}
+		#down:active{
+			background-color: red;
+		}
+		#left{
+			left:-3rem;
+			top: 47%;
+			transform: rotate(90deg);
+		}
+		#left:hover{
+			transform: translate(1rem,0);
+			background-color: white;
+		}
+		#left:active{
+			background-color: red;
+		}
+		#right{
+			right: -3rem;
+			top: 47%;
+			transform: rotate(90deg);
+		}
+		#right:hover{
+			transform: translate(-1rem,0);			
+			background-color: white;
+		}
+		#right:active{
+			background-color: red;
+		}
+		#bottom-set{
+			bottom: 0px;
+		}
+		#row3{
+			bottom: 0px;
 		}
 	</style>
 </head>
 <body>
 	<div class="intro-screen">
 		<div class="black-cover"></div>
-		<img src="corner.png" class="corner" id="top-left">
-		<img src="corner.png" class="corner" id="top-right">
-		<img src="corner.png" class="corner" id="bottom-left">
-		<img src="corner.png" class="corner" id="bottom-right">
-		<h1>resize the window</h1>
+		<span class="corner" id="top-left">resize</span>
+		<span class="corner" id="top-right">the</span>
+		<span class="corner" id="bottom-left">window</span>
+		<img src="arrow.png" class="corner" id="bottom-right">
+		<img src="nav.png" class="nav" id="up">
+		<img src="nav.png" class="nav" id="down">
+		<img src="nav2.png" class="nav" id="left">
+		<img src="nav2.png" class="nav" id="right">
 	</div>
 
 	<div class="top-set">
 		<div class="row">
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
+			<span class="box b1"></span>
+			<span class="box b2"></span>
+			<span class="box b3"></span>
+			<span class="box b4"></span>
+			<span class="box b5"></span>
 		</div>
 		<div class="row">
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
+			<span class="box b6"></span>
+			<span class="box b7"></span>
+			<span class="box b8"></span>
+			<span class="box b9"></span>
+			<span class="box b10"></span>
 		</div>
-		<div class="row">
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
+		<div class="row row3">
+			<span class="box b11"></span>
+			<span class="box b12"></span>
+			<span class="box b13"></span>
+			<span class="box b14"></span>
+			<span class="box b15"></span>
 		</div>
 	</div>
 	<div class="bottom-set">
 		<div class="row">
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
+			<span class="box b16"></span>
+			<span class="box b17"></span>
+			<span class="box b18"></span>
+			<span class="box b19"></span>
+			<span class="box b20"></span>
 		</div>
 		<div class="row">
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
+			<span class="box b21"></span>
+			<span class="box b22"></span>
+			<span class="box b23"></span>
+			<span class="box b24"></span>
+			<span class="box b25"></span>
 		</div>
-		<div class="row">
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
-			<span class="box"></span>
+		<div class="row row3">
+			<span class="box b26"></span>
+			<span class="box b27"></span>
+			<span class="box b28"></span>
+			<span class="box b29"></span>
+			<span class="box b30"></span>
 		</div>
 	</div>
 </body>
