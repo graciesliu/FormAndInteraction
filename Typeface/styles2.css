@@ -8,6 +8,7 @@ body{
 	height:100%;
 	margin: auto;
 	mix-blend-mode: screen;
+	/*color: maroon;*/
 }
 .char{
 	margin: 1rem;
@@ -123,6 +124,7 @@ div{
 	transform: scaleX(10);
 	transform: scaleY(2000);
 	background-image: url(heart.gif)
+	
 }
 #r38:active{
 	background-color: magenta;
@@ -137,5 +139,39 @@ div{
 	transform: translate3d(42px, -62px, -135px);
 	transition: .5s;
 }
+.char.mono{
+	filter: grayscale(100%);
+}
+.medCir.blr{
+	filter: blur(10px);
+}
+.char.hue{
+	filter: hue-rotate(30deg);
+}
 
-
+#r50{
+	transition-timing-function: ease;
+}
+@keyframes spinspin{
+	from{transform: rotate(0deg)}
+	to{transform: rotate(360deg)}
+}
+.char.spin{
+	animation: spinspin 10s ease 0s infinite alternate;
+}
+@keyframes bg-change-slow{
+	0%{background-color: rgba(255,255,255,.5)}
+	10%{background-color: rgba(192,112,142,.5)}
+	20%{background-color: rgba(122,212,242,.5)}
+	30%{background-color: rgba(252,122,232,.5)}
+	40%{background-color: rgba(215,232,202,.5)}
+	50%{background-color: rgba(222,121,142,.5)}
+	60%{background-color: rgba(192,152,142,.5)}
+	70%{background-color: rgba(92,222,231,.5)}
+	80%{background-color: rgba(192,112,242,.5)}
+	90%{background-color: rgba(121,122,142,.5)}
+	100%{background-color: rgba(255,255,255,.5);}
+}
+body.bg-change-slow{
+	animation: bg-change-slow 60s linear 0s 2 alternate;
+}

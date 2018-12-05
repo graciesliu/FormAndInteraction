@@ -90,9 +90,16 @@ $(document).ready(function() {
 		$(this).animate({"border-radius":"50%"}, 500);
 	})
 
-	var t = true;
+	var t12 = true;
 	$("#r12").click(function(){
-		$("body").css("background-color","yellow");
+		if(t12 ==true){
+			$("body").css("background-color","yellow");
+			t12=false;
+		}
+		else{
+			$("body").css("background-color","transparent");
+			t12=true;
+		}
 	})	
 
 	$("#r13").click(function(){
@@ -115,7 +122,7 @@ $(document).ready(function() {
 	})	
 
 	$("#r17").click(function(){
-		$("body").animate({"font-family":"aktiv-grotesk"}, 1000)
+		$("body").css("font-family","Fruktur")
 	})	
 
 	$("#r18").click(function(){
@@ -125,9 +132,17 @@ $(document).ready(function() {
 		$("#r18t1").animate({"width":"5000px"}, 2000, "swing");
 	})	
 
+	var t19 = false
 	$("#r19").click(function(){
-
-		$("body").animate({"font-family":"aktiv-grotesk"}, 100)
+		if(t19==false){
+			$("body").css("font-family","'Libre Barcode 39 Extended'")
+			$("body").css("font-size","4rem")
+			$("body").css("color","orangered")
+			t19 = true;
+		}
+		else{
+			$("body").prop("all","unset")
+		}
 	})	
 
 	$("#r20").click(function(){
@@ -141,32 +156,26 @@ $(document).ready(function() {
 	})	
 
 	$("#r21").click(function(){
-
 		$(".medSqr").animate({"width":"5000%"}, 1000)
 	})	
 
 	$("#r22").click(function(){
-
 		$(".medCir").animate({"left":"300px", "bottom":"300px"}, 1000, "swing")
 	})
 
 	$("#r23").click(function(){
-
 		$(".medTri").css("z-index","5000")
 	})	
 
 	$("#r24").click(function(){
-
 		$(".medSqr").fadeOut(3000, "swing")
 	})	
 
 	$("#r25").click(function(){
-
 		$(".r2").css("background-image","url(heart.gif)")
 	})	
 
 	$("#r26").click(function(){
-
 		$("span").animate({"font-size":"10rem"}, 2000, "swing")
 	})	
 
@@ -183,7 +192,6 @@ $(document).ready(function() {
 	})
 
 	$("#r28").click(function(){
-
 		$(this).animate({"position":"absolute", "top":"100px", "right":"100px"}, 2000, "swing", function(){
 			$("#r29").animate({"position":"absolute", "top":"100px", "right":"100px"}, 2000, "swing", function(){
 				$("#r30").animate({"position":"absolute", "top":"100px", "right":"100px"}, 2000, "swing", function(){
@@ -250,6 +258,167 @@ $(document).ready(function() {
 		alert("Ouchies! You've poked me " + c + " times.");
 	})
 
-	
+	var tt = false;
+	$("#r44").click(function(){
+		if (tt == false){
+			$(".char").addClass("mono")
+			tt = true;
+		}
+		else{
+			$(".char").removeClass("mono");
+			tt = false;
+		}
+	})
 
-});
+	var ttt = false;
+	$("#r45").click(function(){
+		if (ttt == false){
+			$(".medCir").addClass("blr")
+			ttt = true;
+		}
+		else{
+			$(".medCir").removeClass("blr");
+			ttt = false;
+		}
+	})
+
+	var v = false;
+	$("#r46").click(function(){
+		if (v == false){
+			$(".char").addClass("hue");
+			v = true;
+		}
+		else{
+			$(".char").removeClass("hue");
+			v = false;
+		}
+	})
+
+	$("#r47").click(function(){
+	for (var i = 0; i<80; i++){
+		if(i%2==0){
+			$("#r"+i+" .num").append("<div class='num'>"+i+"</div>");
+		}
+	} 
+	})
+
+	$("#r48").click(function(){
+	for (var i = 1; i<=80; i++){
+		if(i%2==1){
+			$("#r"+i+" .num").append("<span class='num'>"+i+"</span>");
+		}
+	} 
+	})
+
+	var t49=true;
+	$("#r49").click(function(){
+		if(t49==true){
+			$(".char").css("background-color","mediumorchid")
+			$(".medCir").css("background-color","lime")
+			t49 = false;
+		}
+		else{
+			$(".char").css("background-color","transparent")
+			$(".medCir").css("background-color","black")
+			t49 = true;
+		}
+		
+	})
+
+	$("#r50").click(function(){
+		for(var i = 1; i <=80; i++){
+			$("#r"+i).css("position","relative");
+			if(i%3==0){
+				$("#r"+i).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400)
+			}else if(i%3==1){
+				$("#r"+i).fadeOut(800).fadeIn(800).fadeOut(800).fadeIn(800).fadeOut(800).fadeIn(800).fadeOut(800).fadeIn(800)
+			}else if(i%3==2){
+				$("#r"+i).fadeOut(1200).fadeIn(1200).fadeOut(1200).fadeIn(1200).fadeOut(1200).fadeIn(1200).fadeOut(1200).fadeIn(1200)
+			}
+		}
+	})
+
+	var t51 = false
+	$("#r51").click(function(){
+		if(t51==false){
+			$(".R").each(function(){
+				$(this).addClass("spin");
+				t51=true;
+			})
+		}
+		else{
+			$(".R").each(function(){
+				$(this).removeClass("spin");
+				t51=false;
+			})
+		}
+		
+	})
+	
+	$("#r52").click(function(){
+		$("body").addClass("bg-change-slow");
+	})
+
+	var t53=true
+	$("#r53").click(function(){
+		if(t53=true){
+			for(var i = 1; i <=80; i++){
+				if(i%8==7){
+					$("#r"+i+" .r2").delay(3500).animate({"left":"200px"},2000,"swing")
+				}
+				if(i%8==6){
+					$("#r"+i+" .r2").delay(3000).animate({"left":"200px"},2000,"swing")
+				}
+				if(i%8==5){
+					$("#r"+i+" .r2").delay(2500).animate({"left":"200px"},2000,"swing")
+				}
+				if(i%8==4){
+					$("#r"+i+" .r2").delay(2000).animate({"left":"200px"},2000,"swing")
+				}
+				if(i%8==3){
+					$("#r"+i+" .r2").delay(1500).animate({"left":"200px"},2000,"swing")
+				}
+				if(i%8==2){
+					$("#r"+i+" .r2").delay(500).animate({"left":"200px"},2000,"swing")
+				}
+				if(i%8==1){
+					$("#r"+i+" .r2").animate({"left":"200px"},2000,"swing")
+				}
+				if(i%8==0){
+					$("#r"+i+" .r2").delay(4000).animate({"left":"200px"},2000,"swing")
+				}
+				t53=false;
+			}
+		}else{
+			for(var i = 1; i <=80; i++){
+				if(i%8==7){
+					$("#r"+i+" .r2").delay(3500).animate({"right":"200px"},2000,"swing")
+				}
+				if(i%8==6){
+					$("#r"+i+" .r2").delay(3000).animate({"right":"200px"},2000,"swing")
+				}
+				if(i%8==5){
+					$("#r"+i+" .r2").delay(2500).animate({"right":"200px"},2000,"swing")
+				}
+				if(i%8==4){
+					$("#r"+i+" .r2").delay(2000).animate({"right":"200px"},2000,"swing")
+				}
+				if(i%8==3){
+					$("#r"+i+" .r2").delay(1500).animate({"right":"200px"},2000,"swing")
+				}
+				if(i%8==2){
+					$("#r"+i+" .r2").delay(500).animate({"right":"200px"},2000,"swing")
+				}
+				if(i%8==1){
+					$("#r"+i+" .r2").animate({"right":"200px"},2000,"swing")
+				}
+				if(i%8==0){
+					$("#r"+i+" .r2").delay(4000).animate({"right":"200px"},2000,"swing")
+				}
+			}
+			t53=true;
+		}
+	})
+
+	
+})

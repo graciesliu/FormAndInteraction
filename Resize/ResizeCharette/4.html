@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var w = window.innerWidth*.01;
+			$(".box").css("width",w);
+			var h = window.innerHeight*.33;
+			$(".box").css("height",h);
+			var bdr = window.innerWidth/1200*100+window.innerWidth/1200*18;
+			$(".box").css("border",bdr+"px solid white");
+			var p = window.innerHeight/750*100/1.5;
+			$(".box").css("border-image","url("+currentImg+") "+p+" round");
+			$(".box").css("box-sizing","border-box")
+
+		var t=true;
+		$(window).resize(function(){
+			$(".intro-screen").fadeOut(2000);
+			var ww = window.innerWidth*.01;
+			$(".box").css("width",ww);
+			var hh = window.innerHeight*.33;
+			$(".box").css("height",hh);
+			var bdr = window.innerWidth/1200*100+window.innerWidth/1200*18;
+			$(".box").css("border",bdr+"px solid white");
+			var p = window.innerHeight/750*100/1.5;
+			$(".box").css("border-image","url("+currentImg+") "+p+" round");
+
+			var r = window.innerWidth
+			$(".top-set .box").css("transform","rotate("+r+"deg)")
+			$(".bottom-set .box").css("transform","rotate(-"+r+"deg)")
+
+			var r2 = Math.floor((Math.random() * 100) + 1);
+			var g2 = Math.floor((Math.random() * 100) + 1);
+			var b2 = Math.floor((Math.random() * 100) + 1);
+			$("body").css("background-color","rgb("+r2+","+g2+","+b2+")");
+		})
+
+		var c = 0;
+		var currentImg = "bi1.png";
+		var imgArray = ["bi1.png","bi2.png","bi3.png","bi4.png","bi5.png",null]
+		$(".box").click(function(){
+			console.log(c);
+			console.log(imgArray[c]);
+			if(c<5){
+				c++;
+			}else{
+				c=0;
+			}
+			currentImg = imgArray[c];
+			$(".box").css("border-image-source","url("+imgArray[c]+")");
+		})
+	})
+	</script>
+	<style type="text/css">
+		body{
+			background-color: black;
+			transition: 5s;
+			margin: 0;
+			padding: 0;
+			mix-blend-mode: screen;
+			width: 100%;
+			height: 100%;
+		}
+		.box{
+			margin: 0;
+			padding: 0;
+			position: relative;
+			display: inline-block;
+			background-color: transparent;
+			/*background-color: white;*/
+			/*border: 10px solid white;*/
+			border-image: url("border.png") 100px round;
+			/*height: 33.33%;*/
+			/*width: 20%;*/
+			transition: transform 5s ease;			
+			box-sizing: border-box;
+			mix-blend-mode: exclusion;
+			/*box-shadow: 0px 0px 0px 1px #ffffff;*/
+			border-radius: 50px;
+			/*animation: bdr-rad 1s linear infinite alternate;*/
+		}
+
+		span{
+			transition: border-image-slice 2s ease;
+		}
+/*		@keyframes bdr-rad{
+			0%{border-radius: 50px}
+			100%{border-radius: 0px;}
+		}*/
+		@keyframes blr-anim{
+			0%{filter:blur(0px);}
+			25%{filter:blur(0px);}
+			75%{filter:blur(5px);}
+			100%{filter:blur(5px);}
+		}
+/*		.box:hover{
+			filter: invert(100%);
+			transition: filter 2s ease;
+		}*/
+		.row{
+			width: 100%;
+			height: 30%;
+			margin: 0;
+			padding: 0;
+			mix-blend-mode: screen;
+
+		}
+		.bottom-set{
+			position: absolute;
+			mix-blend-mode: overlay;
+			animation: blr-anim 5s linear 2s infinite alternate;
+		}
+		.top-set{
+			position: absolute;
+			mix-blend-mode: overlay;
+		}
+		
+		.intro-screen{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			z-index: 2;
+		}
+		.black-cover{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: gray;
+			opacity: .8;
+			mix-blend-mode: multiply;
+			z-index: 3;
+		}
+		.corner{
+			width: 2rem;
+			height: 2rem;
+			position: absolute;
+			z-index: 4;
+		}
+		h1{
+			font-size: 4rem;
+			letter-spacing: 2px;
+			margin: auto;
+			position: absolute;
+			color: white;
+			z-index: 5;
+			top: 40%;
+			left: 45%;
+		}
+		#top-left{
+			top:50px;
+			left: 50px;
+			transform: rotate(180deg);
+		}
+		#top-right{
+			top:50px;
+			right: 50px;
+			transform: rotate(-90deg);
+
+		}
+		#bottom-left{
+			bottom:50px;
+			left: 50px;
+			transform: rotate(90deg);
+		}
+		#bottom-right{
+			bottom:50px;
+			right: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="intro-screen">
+		<div class="black-cover"></div>
+		<img src="corner.png" class="corner" id="top-left">
+		<img src="corner.png" class="corner" id="top-right">
+		<img src="corner.png" class="corner" id="bottom-left">
+		<img src="corner.png" class="corner" id="bottom-right">
+		<h1>resize the window</h1>
+	</div>
+
+	<div class="top-set">
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+	</div>
+	<div class="bottom-set">
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		var bdrr = window.innerWidth/1200*100
+		$(".box").css("box-sizing","border-box")
+		
+		// var mbmArray = ["normal","multiply","screen","overlay","darken","lighten","color-dodge","color-burn","saturation","color","luminosity"];
+		// var mbmCount = 0;
+		// $(".box").click(function(){
+		// 	$(".box").prop("mix-blend-mode",mbmArray[mbmCount]);
+		// 	$(".row").prop("mix-blend-mode",mbmArray[mbmCount]);
+		// 	$(".top-set").prop("mix-blend-mode",mbmArray[mbmCount]);
+		// 	$(".bottom-set").prop("mix-blend-mode",mbmArray[mbmCount]);
+		// 	console.log(mbmCount);
+		// 	console.log(mbmArray[mbmCount]);
+		// 	if(mbmCount<11){
+		// 		mbmCount++;
+		// 	}else{
+		// 		mbmCount=0;
+		// 	}
+		// })
+		$(window).resize(function(){
+			var ww = window.innerWidth*.01;
+			$(".box").css("width",ww);
+			var hh = window.innerHeight*.33;
+			$(".box").css("height",hh);
+			var bdr = window.innerWidth/1200*100+window.innerWidth/1200*18;
+			$(".box").css("border",bdr+"px solid red");
+			var p = window.innerHeight/750*100/1.5;
+			$(".box").css("border-image","url(border.png) "+p+" round");
+
+			var r = window.innerWidth
+			$(".top-set .box").css("transform","rotate("+r+"deg)")
+			$(".bottom-set .box").css("transform","rotate(-"+r+"deg)")
+
+			var r2 = Math.floor((Math.random() * 255) + 1);
+			var g2 = Math.floor((Math.random() * 255) + 1);
+			var b2 = Math.floor((Math.random() * 255) + 1);
+			$("body").css("background-color","rgb("+r2+","+g2+","+b2+")");
+		})
+		$(".box").mouseover(function(){
+			$(".box").blur()
+		})
+	})
+	</script>
+	<style type="text/css">
+		body{
+			background-color: black;
+			transition: 5s;
+			margin: 0;
+			padding: 0;
+			mix-blend-mode: screen;
+			width: 100%;
+			height: 100%;
+		}
+		@keyframes hr{
+			from{border-radius: 0%;}
+			to{border-radius: 100%;}
+		}
+		.box.hue-rotate-class{
+			animation: hr 2s linear 0s 
+		}
+		.box{
+			margin: 0;
+			padding: 0;
+			position: relative;
+			display: inline-block;
+			background-color: transparent;
+			/*background-color: white;*/
+			border: 10px solid red;
+			border-image: url(border.png) 100px round;
+			height: 33.33%;
+			width: 20%;
+			transition: transform 5s ease;			
+			box-sizing: border-box;
+			mix-blend-mode: exclusion;
+			/*box-shadow: 0px 0px 0px 1px #ffffff;*/
+			border-radius: 50px;
+		}
+		.row{
+			width: 100%;
+			height: 30%;
+			margin: 0;
+			padding: 0;
+			mix-blend-mode: exclusion;
+		}
+		.bottom-set{
+			position: absolute;
+			mix-blend-mode: difference;
+			filter: blur(5px);
+		}
+		.top-set{
+			position: absolute;
+			mix-blend-mode: exclusion;
+		}
+	</style>
+</head>
+<body>
+	<div class="top-set">
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+	</div>
+	<div class="bottom-set">
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+		<div class="row">
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+			<span class="box"></span>
+		</div>
+	</div>
+</body>
+</html>
