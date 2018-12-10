@@ -420,5 +420,31 @@ $(document).ready(function() {
 		}
 	})
 
-	
+	var t54=true;
+	$("#r54").click(function(){	
+		if (t54==true){
+			for(var i = 1; i <=80; i++){
+				if(i>54){
+					$("#r"+i+" .medTri").animate({"top":"100px","left":"100px"},1000)
+				}else{
+					$("#r"+i+" .medTri").animate({"top":"-100px","left":"-100px"},1000)
+					console.log(i);
+				}
+			}
+				t54=false;
+		}else{
+			for(var i = 1; i <=80; i++){
+				if(i>54){
+					$("#r"+i+" .medTri").animate({"top":"-100px","left":"-100px"},1000)
+				}else{
+					$("#r"+i+" .medTri").animate({"top":"100px","left":"100px"},1000)
+				}
+			}
+				t54=true;
+		}
+	})
+
+	$("#r55").click(function(){
+		
+	})
 })
